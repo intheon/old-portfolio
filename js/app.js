@@ -14,6 +14,7 @@ $(document).ready(function(){
 		{
 			// what is the id
 			var panel = this.id.split("-");
+
 			panel = "#" + panel[0] + "-content";
 
 			// do something
@@ -29,6 +30,7 @@ $(document).ready(function(){
 
 function showPanel(panel)
 {
+	console.log(panel);
 	if ($(panel + " div").hasClass("anim"))
 	{
 		console.log("yup");
@@ -51,10 +53,37 @@ function showPanel(panel)
 
 function startDragend()
 {
+
 	$(".portfolio-slides-container").dragend({
-		onSwipeEnd: function(){
+		onSwipe: function(event)
+		{
+			$(".dragend-page h1").css("margin-top", $(".dragend-page").position().left);
+			$(".dragend-page h2").css("margin-right", $(".dragend-page").position().left - 16);
+			$(".dragend-page h3").css("margin-left", $(".dragend-page").position().left - 30);
+				console.log($(".dragend-page").position().left);
 		},
-		afterInitialize: function(){
+		onDrag: function(event)
+		{
+			$(".dragend-page h1").css("margin-top", $(".dragend-page").position().left);
+			$(".dragend-page h2").css("margin-right", $(".dragend-page").position().left - 16);
+			$(".dragend-page h3").css("margin-left", $(".dragend-page").position().left - 30);
+				console.log($(".dragend-page").position().left);
+		},
+		onDragEnd: function(event){
+
+			$(".dragend-page h1").removeAttr("style");
+			$(".dragend-page h2").removeAttr("style");
+			$(".dragend-page h3").removeAttr("style");
+		},
+		onSwipeEnd: function(event){
+
+			$(".dragend-page h1").removeAttr("style");
+			$(".dragend-page h2").removeAttr("style");
+			$(".dragend-page h3").removeAttr("style");
+		},
+		afterInitialize: function(event){
+			console.log(this.page);
+			console.log("init");
 			this.container.style.visibility = "visible";
 		},
 	});
