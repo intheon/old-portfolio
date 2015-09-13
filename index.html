@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Mario Jäckle">
 	<link rel="stylesheet" type="text/css" href="./css/styles.css">
-	<!--<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>-->
+	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 </head>
 
@@ -38,13 +38,13 @@
 		<div class="column-12 center">
 			<div class="content-wrapper">
 
-				<div id="home-content">
+				<div id="home-content" class="quart2">
 
 					<div class="line-1">
 						Hello! I see you've found my site!
 					</div>
 					<div class="line-2">
-						I'm Ben... <img src="./img/bear.png" width="55px"> ... glad to meet you.
+						<img src="./img/bear.png" width="55px"> I'm Ben ... glad to meet you.
 					</div>
 					<div class="line-3">
 						I specialise in creating interactive elements, and happy to work on your project.
@@ -55,20 +55,111 @@
 
 				</div>
 
-				<div id="portfolio-content">
+				<div id="portfolio-content" class="quart">
 
 					<div class="portfolio-slides-container">
 
 						<div class="dragend-page portfolio-slide portfolio-slide-1" draggable="false">
-							<h1>this is all the stuff im proud off</h1>
-							<h2>item 1: ed's website</h2>
-							<p>created this for a buddy of mine who runs his own recording studio and mixing service. guy works crazy hard so if you're a musician who needs some recording help give him a shout</p>
-							<p>http://intheon.uk/ed</p>
-							<h3>swipe >>>></h3>
+							<img src="./img/slide1bw.png" class="back" width="100%">
+							<div class="row negative-bump">
+								<div class="column-6">
+									<div class="row">
+										<div class="column-8">
+											<h2 class="portfolio-header">Ed's website</h2>
+										</div>
+										<div class="column-4">
+											<a class="portfolio-link" href="http://intheon.uk/ed" target="_blank">intheon.uk/ed</a>
+										</div>
+									</div>
+								</div>
+								<div class="column-6">
+										<h2 class="portfolio-header-second">Features</h2>
+								</div>
+							</div>
+							<div class="row background">
+								<div class="column-6 left padd">
+									<p>Created this for a buddy of mine who runs his own recording studio and mixing service.</p>
+									<p>Ed works crazy hard so if you're a musician who needs some recording help give him a shout!</p>
+								</div>
+								<div class="column-6">
+									<ul>
+										<li>Responsive Design</li>
+										<li>Instagram and Soundcloud feeds</li>
+										<li>Contact form</li>
+										<li>Lightweight, uses only jQuery and Semantic UI</li>
+									</ul>
+								</div>
+							</div>
+							<h3 class="swipe padd">Swipe down vvvv<h3>
 						</div>
 
 						<div class="dragend-page portfolio-slide portfolio-slide-2" draggable="false">
-							<h1>dim sum</h1>
+							<img src="./img/slide2bw.png" class="back" width="100%">
+							<div class="row negative-bump">
+								<div class="column-6">
+									<div class="row">
+										<div class="column-8">
+											<h2 class="portfolio-header">Is Twitter happy?</h2>
+										</div>
+										<div class="column-4">
+											<a class="portfolio-link" href="http://intheon.uk/twitter" target="_blank">intheon.uk/twitter</a>
+										</div>
+									</div>
+								</div>
+								<div class="column-6">
+										<h2 class="portfolio-header-second">Built with</h2>
+								</div>
+							</div>
+							<div class="row background">
+								<div class="column-6 left padd">
+									<p>Built as a mess around project to see if I can hook up different APIs</p>
+									<p>Pop in any hashtag, or phase and it will us AI to find out whether the user is happy or not :)</p>
+								</div>
+								<div class="column-6">
+									<ul>
+										<li>AJAX based</li>
+										<li>Uses Twitter and Semantic APIs</li>
+										<li>Select your range</li>
+										<li>Lightweight</li>
+									</ul>
+								</div>
+							</div>
+							<h3 class="swipe padd">Swipe down vvvv<h3>
+						</div>
+
+						<div class="dragend-page portfolio-slide portfolio-slide-3" draggable="false">
+							<img src="./img/slide3bw.png" class="back" width="100%">
+							<div class="row negative-bump">
+								<div class="column-6">
+									<div class="row">
+										<div class="column-8">
+											<h2 class="portfolio-header">Promo code generator</h2>
+										</div>
+										<div class="column-4">
+											<a class="portfolio-link" href="http://intheon.uk/promo" target="_blank">intheon.uk/promo</a>
+										</div>
+									</div>
+								</div>
+								<div class="column-6">
+										<h2 class="portfolio-header-second">Built with</h2>
+								</div>
+							</div>
+							<div class="row background">
+								<div class="column-6 left padd">
+									<p>I had to generate a lot of promo codes to set up access to a magazine</p>
+									<p>Simply choose the range and will generate simple codes</p>
+								</div>
+								<div class="column-6">
+									<ul>
+										<li>Single page</li>
+										<li>Uses the HTML5 download API for the CSV download.</li>
+										<li>Select your range</li>
+										<li>No backend coding, all jQuery.</li>
+										<li>Uses chance.js</li>
+									</ul>
+								</div>
+							</div>
+							<h3 class="swipe padd">Swipe down vvvv<h3>
 						</div>
 
 					</div>
@@ -80,18 +171,55 @@
 
 				<div id="about-content">
 
-					<!--<div class="testAnim">about</div>-->
+					<div class="about-container" >
+						<div class="row">
+							<div class="column-7">
+								<img src="./img/about.png" width="100%">
+							</div>
+						</div>
+												<div class="row">
+							<div class="column-7">
+								<p>Born in Blackburn, England - Currently in London</p>
+								<p>Doing Web Dev since 14, now 25</p>
+								<p>Works for YUDU Publisher, techy and sales roles</p>
+								<p>Will be working in this industry for years to come.</p>
+							</div>
+							</div>
+
+
+					</div>
+
 
 					<!--lots of self indulgiant tripe-->
 
 				</div>
 
-				<div id="contact-content">
+				<div id="contact-content" class="quart3">
 
-					<!--<div class="testAnim">contact</div>-->
+					<div class="line-1">
+						<h3>Send me a message!</h3>
+					</div>
+					<div class="line-2">
+						<input type="text" placeholder="Your Name" class="custom-input">
+					</div>
+					<div class="line-3">
+						<input type="text" placeholder="Your Email" class="custom-input">
+					</div>
+					<div class="line-4">
+						<input type="text" placeholder="Your Message" class="custom-input">
+					</div>
+					<div class="line-5">
+						<input type="button" value="Send!" class="custom-send">
+					</div>
 
-					<!--get in contact y0;-->
-
+					<div class="line-6">
+						<div class="social-bar row">
+							<div class="social-link column-4"><a href="https://twitter.com/intheon" target="_blank"><img src="./img/twitter.png"></a></div>
+							<div class="social-link column-4"><a href="https://uk.linkedin.com/pub/ben-smith/a2/678/493" target="_blank"><img src="./img/linkedin.png"></a></div>
+							<div class="social-link column-4"><a href="@intheon" target="_blank"><img src="./img/telegram.png"></a></div>
+							<div class="social-link column-4"><a href="http://steamcommunity.com/profiles/76561198027554343/" target="_blank"><img src="./img/steam.png"></a></div>
+						</div>
+					</div>
 				</div>
 
 

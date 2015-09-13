@@ -31,7 +31,7 @@ $colour3:  				#76276C;
 
 %fancyFont
 {
-	font-family: 'Comfortaa', cursive;
+	font-family: 'Righteous', cursive;
 }
 
 %normalFont
@@ -56,8 +56,8 @@ body
 
 .main-container
 {
-	margin: 			$smallPadding;
-	padding: 			$smallPadding;
+	margin: 			0;
+	padding: 			0;
 	height:				100% !important;
 }
 
@@ -174,6 +174,18 @@ h4
 	color:				$colour2;
 }
 
+a 
+{
+	@extend 			%fancyFont;
+	color:				$colour1;
+	transition:			all 0.5s;
+	&:hover
+	{
+		letter-spacing: 1px;
+		color:			$colour2;
+	}
+}
+
 #navigation-header
 {
 	margin-top:			0% !important;
@@ -197,11 +209,10 @@ h4
 
 .line-1
 {
-	margin-right:		-100%;
+	margin-left:		-100%;
 	opacity:			0;
 	transition:			all 0.8s;
 }
-
 .line-2
 {
 	margin-right:		-100%;
@@ -216,10 +227,23 @@ h4
 }
 .line-4
 {
-	margin-left:		-100%;
+	margin-right:		-100%;
 	opacity:			0;
 	transition:			all 1.3s;
 }
+.line-5
+{
+	margin-left:		-100%;
+	opacity:			0;
+	transition:			all 1.6s;
+}
+.line-6
+{
+	margin-left:		-100%;
+	opacity:			0;
+	transition:			all 2s;
+}
+
 
 .portfolio-slides-container
 {
@@ -242,19 +266,63 @@ h4
 
 .portfolio-slide-1
 {
-	width:				100%;
-	height:				100%;
-	background:			url(../img/test.png) no-repeat;
 	transition:			all 1s;
 	opacity:			1;
+	background:			url(../img/slide1bg.png) no-repeat;
 }
 
-.port-background
+.about-container
 {
-	content:			url(../img/test.png);
-	margin-left:		-100% !important;
+	margin-right:		-100%;
+	float:				right;
 	opacity:			0;
-	transition:			all 1s;
+	transition:			all 0.5s;
+}
+
+.custom-input
+{
+
+	outline: 			none;
+	padding:			1.25%;
+	margin-top:			0.5%;
+	margin-bottom:		2.5%;
+	background:			white;
+	color:				$colour2;	
+	border:				none;
+	border-bottom:		2px solid rgba(0,0,0,0.0);
+	border-radius:		3px;
+	transition:			all 1.7s;
+	font-size:			$defaultFontSize * 1.2;
+	text-align:			center;
+}
+.custom-send
+{
+	width:				100%;
+	outline: 			none;
+	padding:			1.55%;
+	margin-top:			0.5%;
+	margin-bottom:		2.5%;
+	background:			lighten($colour1, 50%);
+	color:				$colour1;	
+	border:				none;
+	border-bottom:		2px solid rgba(0,0,0,0.0);
+	border-radius:		3px;
+	transition:			all 1.7s;
+	font-size:			$defaultFontSize * 1.2;
+	text-align:			center;
+}
+.custom-send:hover
+{
+	background:			rgba(215,169,131,0.75);
+	border-bottom:		2px solid rgba(191,145,105,0.5);
+	color:				$colour1;
+	cursor:				pointer;
+}
+.custom-input:focus
+{
+	background:			rgba(215,169,131,0.75);
+	border-bottom:		2px solid rgba(191,145,105,0.5);
+	color:				$colour1;
 }
 
 .anim
@@ -263,11 +331,93 @@ h4
 	margin:				0% !important;
 }
 
-.test
+.content-wrapper{
+	width:100%;
+}
+#contact-container
 {
-	opacity:			0.3;
-	margin:				-30% !important;
+	z-index:8000;
+}
+.quart2
+{
+	float:left;
+	width:100%;
+}
+.quart3
+{
+	float:right;
+}
+.quart
+{
+	float:left;
+	margin-left:-100% !important;
+}
+.portfolio-header
+{
+	text-align:left;
+	color:		darken(white, 35%);
+	font-size: 	$defaultFontSize * 1.7;
+	padding-left:	0.5%;
+	margin-left:	0.5%;
+}
+.portfolio-header-second
+{
+	text-align:right;
+	color:		darken(white, 25%);
+	font-size: 	$defaultFontSize * 1.7;
+}
+.portfolio-link
+{
+	text-align:left;
+	text-decoration:	none;
+	font-size: 	$defaultFontSize * 1.7;
+}
+.swipe
+{
+	text-align:left;
+	text-decoration:	none;
+	font-size: 	$defaultFontSize * 1.2;
+	color:		darken(white, 20%);
+}
+
+.left
+{
+	text-align:left;
 }
 
 
+ul li  
+{
+	list-style:none;
+	text-align:right;
+}
 
+.negative-bump
+{
+	margin-top:-5% !important;
+	padding-top:	1%;
+	background-color: darken(rgba(249,249,249,0.9),5%);
+	z-index:6000;
+	position:relative;
+}
+.background
+{
+	background-color: rgba(249,249,249,0.8);
+		z-index:6000;
+	position:relative;
+}
+.padd
+{
+	padding-left:	0.5%;
+	margin-left:	0.5%;
+}
+
+.social-link
+{
+	display:inline-block;
+	padding:		1%;
+}
+
+.pile {
+	z-index:3;
+}
