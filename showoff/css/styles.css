@@ -287,4 +287,16 @@ ul li {
 .pile {
   z-index: 3; }
 
+.nav-link {
+  font-size: 1.1em;
+  transition: all 1s; }
+
+.nav-link:hover {
+  color: #AA4D39;
+  cursor: pointer; }
+
+.active-link {
+  color: #963254;
+  cursor: pointer; }
+
 /*# sourceMappingURL=styles.css.map */

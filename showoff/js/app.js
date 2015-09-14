@@ -16,24 +16,28 @@ $(document).ready(function(){
 			var panel = this.id.split("-");
 
 			panel = "#" + panel[0] + "-content";
-
+			$(".nav-link").removeClass("active-link");
+			$("#" + this.id).addClass("active-link");
 			// do something
 			showPanel(panel)
 		});
-
 	});
 
 	// make the portfolio 'dragend' functional
 	startDragend();
 
+	// make the contact us form interactive
+	$("#contact-form-send").click(function(){
+		parseContactForm();
+	});
+
 });
 
 function showPanel(panel)
 {
-	console.log(panel);
 	if ($(panel + " div").hasClass("anim"))
 	{
-		console.log("yup");
+		return;
 	}
 	else
 	{
@@ -93,7 +97,34 @@ function startDragend()
 			this.container.style.visibility = "visible";
 		},
 	});
+}
 
+function parseContactForm()
+{
+	var tName = $("#contact-form-name").val();
+	var tEmail = $("#contact-form-email").val();
+	var tMessage = $("#contact-form-message").val();
 
+	if (tName == false || tEmail == false || tMessage == false)
+	{
+		console.log("one is blank");
+	}
+	else
+	{
+		$.ajax({
+			type				: "POST",
+			url                 : "../showoff/php/email.php",
+			data 				: 
+			{
+				nameFrom   		: tName,
+				emailFrom  		: tEmail,
+				messageFrom  	: tMessage  
+			},
+			success				: function(response)
+			{
+				console.log(response);
+			}
+		});
+	}
 
 }
