@@ -1,0 +1,445 @@
+// --- vars
+
+$backgroundVars:		#f9f9f9;
+$noPadding:				0;
+$smallPadding:			0.5%;
+$largePadding:			2%;
+$headerColour:			#000000;
+$letterSpacing:	        2px;
+$defaultFontSize:		1em;
+
+$colour1:  				#AA4D39;
+$colour2:  				#963254;
+$colour3:  				#76276C;
+
+// --- extends
+
+%clearfix:after
+{
+	display:			block;
+	clear:				both;
+	content:			"";
+}
+
+%center
+{
+	margin-left: 		auto !important;
+    margin-right: 		auto !important;
+    display:			inline-block !important;
+    text-align:			center;
+}
+
+%fancyFont
+{
+	font-family: 'Righteous', cursive;
+}
+
+%normalFont
+{
+	font-family: 'Hind', sans-serif;
+}
+
+// styling
+
+html,body
+{
+	height:	100% !important;
+}
+body
+{
+	@extend 			%normalFont;
+	background:			$backgroundVars;
+	margin:   			$noPadding;
+	padding:			$noPadding;
+	overflow:			hidden;
+}
+
+.main-container
+{
+	margin: 			0;
+	padding: 			0;
+	height:				100% !important;
+}
+
+#page-body, .center
+{
+	height:				90% !important;
+}
+
+.row
+{
+	@extend 			%clearfix;
+
+	& + &
+	{
+		margin-top:		$largePadding;
+	}
+}
+
+[class^="column-"]
+{
+	float:				left;
+	margin-right:		$largePadding;
+	-webkit-box-sizing:	border-box; 
+    -moz-box-sizing:	border-box; 
+    box-sizing:			border-box;
+ 
+    &:last-child 
+    {
+        margin-right:	0%;
+    }
+}
+
+.column-1
+{ 	
+	width:				(100% / 12) - ($largePadding * 11 / 12);
+}
+.column-2
+{ 	
+	width:				(100% / 6) - ($largePadding * 10 / 12); 
+}
+.column-3
+{ 	
+	width:				(100% / 4) - ($largePadding * 9 / 12); 
+}
+.column-4
+{ 	
+	width:				(100% / 3) - ($largePadding * 8 / 12); 
+}
+.column-5
+{ 	
+	width:				(100% / 2.4) - ($largePadding * 7 / 12); 
+}
+.column-6
+{ 	
+	width:				(100% / 2) - ($largePadding * 6 / 12); 
+}
+.column-7
+{ 	
+	width:				(100% / 1.714285714285714) - ($largePadding * 5 / 12); 
+}
+.column-8
+{ 	
+	width:				(100% / 1.5) - ($largePadding * 4 / 12); 
+}
+.column-9
+{ 	
+	width:				(100% / 1.333333333333333) - ($largePadding * 3 / 12); 
+}
+.column-10
+{ 	
+	width:				(100% / 1.2) - ($largePadding * 2 / 12); 
+}
+.column-11
+{ 	
+	width:				(100% / 1.090909090909091) - ($largePadding * 1 / 12); 
+}
+.column-12
+{ 	
+	width:				100%; 
+}
+
+h2,h3,h4
+{
+	padding:			$noPadding;
+	margin:				$noPadding;
+	font-weight: 		0;
+	letter-spacing:		$letterSpacing;
+}
+
+h4
+{
+	color:				lighten($headerColour, 70%) !important;
+	margin-bottom:		$largePadding;
+}
+
+#logo-header div
+{
+	@extend 			%center;
+}
+
+.logo
+{
+	font-size:			$defaultFontSize * 2.85;
+}
+
+.int
+{
+	@extend 			%fancyFont;
+	color:				$colour1;
+}
+.heon
+{
+	@extend 			%fancyFont;
+	color:				$colour2;
+}
+
+a 
+{
+	@extend 			%fancyFont;
+	color:				$colour1;
+	transition:			all 0.5s;
+	&:hover
+	{
+		letter-spacing: 1px;
+		color:			$colour2;
+	}
+}
+
+#navigation-header
+{
+	margin-top:			0% !important;
+}
+
+#navigation-header div
+{
+	@extend 			%center;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+.center
+{
+	@extend 			%center;
+}
+
+.rev-offset
+{
+	margin-left:		-0.5%;
+}
+
+.line-1
+{
+	margin-left:		-100%;
+	opacity:			0;
+	transition:			all 0.8s;
+}
+.line-2
+{
+	margin-right:		-100%;
+	opacity:			0;
+	transition:			all 1s;
+}
+.line-3
+{
+	margin-left:		-100%;
+	opacity:			0;
+	transition:			all 1s;
+}
+.line-4
+{
+	margin-right:		-100%;
+	opacity:			0;
+	transition:			all 1.3s;
+}
+.line-5
+{
+	margin-left:		-100%;
+	opacity:			0;
+	transition:			all 1.6s;
+}
+.line-6
+{
+	margin-left:		-100%;
+	opacity:			0;
+	transition:			all 2s;
+}
+
+#home-content
+{
+	font-size:			1.2em !important;
+}
+
+
+.portfolio-slides-container
+{
+	margin-left:		-100% !important;
+	opacity:			0;
+	transition:			all 1s;
+	width: 				100%;
+	height: 			100%;
+	position:absolute;
+	visibility: 		hidden;
+	cursor: 			hand;
+	cursor:             -moz-grab;
+	cursor:             -webkit-grab;
+	cursor:             grab;
+	color:				white;
+	background:			transparent;
+	overflow: 			hidden !important;
+	color:black;
+}
+
+.portfolio-slide-1
+{
+	transition:			all 1s;
+	opacity:			1;
+}
+
+.about-container
+{
+	margin-right:		-100%;
+	float:				right;
+	opacity:			0;
+	transition:			all 0.5s;
+}
+
+.custom-input
+{
+
+	outline: 			none;
+	padding:			1.25%;
+	margin-top:			0.5%;
+	margin-bottom:		2.5%;
+	background:			white;
+	color:				$colour2;	
+	border:				none;
+	border-bottom:		2px solid rgba(0,0,0,0.0);
+	border-radius:		3px;
+	transition:			all 1.7s;
+	font-size:			$defaultFontSize * 1.2;
+	text-align:			center;
+}
+.custom-send
+{
+	width:				100%;
+	outline: 			none;
+	padding:			1.55%;
+	margin-top:			0.5%;
+	margin-bottom:		2.5%;
+	background:			lighten($colour1, 50%);
+	color:				$colour1;	
+	border:				none;
+	border-bottom:		2px solid rgba(0,0,0,0.0);
+	border-radius:		3px;
+	transition:			all 1.7s;
+	font-size:			$defaultFontSize * 1.2;
+	text-align:			center;
+}
+.custom-send:hover
+{
+	background:			rgba(215,169,131,0.75);
+	border-bottom:		2px solid rgba(191,145,105,0.5);
+	color:				$colour1;
+	cursor:				pointer;
+}
+.custom-input:focus
+{
+	background:			rgba(215,169,131,0.75);
+	border-bottom:		2px solid rgba(191,145,105,0.5);
+	color:				$colour1;
+}
+
+.anim
+{
+	opacity:			1;
+	margin:				0% !important;
+}
+
+.content-wrapper{
+	width:100%;
+}
+#contact-container
+{
+	z-index:8000;
+}
+.quart2
+{
+	float:left;
+	width:100%;
+}
+.quart3
+{
+	float:right;
+}
+.quart
+{
+	float:left;
+	margin-left:-100% !important;
+}
+.portfolio-header
+{
+	text-align:left;
+	color:		darken(white, 35%);
+	font-size: 	$defaultFontSize * 1.7;
+	padding-left:	0.5%;
+	margin-left:	0.5%;
+}
+.portfolio-header-second
+{
+	text-align:right;
+	color:		darken(white, 25%);
+	font-size: 	$defaultFontSize * 1.7;
+}
+.portfolio-link
+{
+	text-align:left;
+	text-decoration:	none;
+	font-size: 	$defaultFontSize * 1.7;
+}
+.swipe
+{
+	text-align:left;
+	text-decoration:	none;
+	font-size: 	$defaultFontSize * 1.2;
+	color:		darken(white, 20%);
+}
+
+.left
+{
+	text-align:left;
+}
+
+
+ul li  
+{
+	list-style:none;
+	text-align:right;
+}
+
+.negative-bump
+{
+	margin-top:-5% !important;
+	padding-top:	1%;
+	background-color: darken(rgba(249,249,249,0.9),5%);
+	z-index:6000;
+	position:relative;
+}
+.background
+{
+	background-color: rgba(249,249,249,0.8);
+		z-index:6000;
+	position:relative;
+}
+.padd
+{
+	padding-left:	0.5%;
+	margin-left:	0.5%;
+}
+
+.social-link
+{
+	display:inline-block;
+	padding:		1%;
+}
+
+.pile {
+	z-index:3;
+}
+
+.nav-link
+{
+	font-size:		$defaultFontSize * 1.1;
+	transition: 	all 1s;
+}
+
+.nav-link:hover
+{
+	color:			$colour1;
+	cursor: 		pointer;
+}
+
+.active-link
+{
+	color:			$colour2;
+	cursor: 		pointer;
+}
