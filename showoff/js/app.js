@@ -57,7 +57,8 @@ function showPanel(panelLabel, htm)
 	switch (panelLabel)
 	{
 		case "home":
-			console.log(htm);
+			var html = getHTML("home-content", htm);
+			console.log(html);
 		break;
 
 		default:
@@ -65,12 +66,11 @@ function showPanel(panelLabel, htm)
 	}
 }
 
-function getHTML(id, dom)
+function getHTML(id, htm)
 {
-	_.each(dom, function(obj){
-		console.log($(obj));
+	_.find(htm, function(obj){
+		if (obj.label == id) return obj
 	});
-	//return html;
 }
 
 function showPanel2(panel)
